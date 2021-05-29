@@ -1,13 +1,51 @@
 <!DOCTYPE html>
+<html>
 <head>
   <title>MAIN</title>
   <meta charset = "utf-8">
+  <script>
+    function nightDayHandler(self){
+      var target = document.querySelector('body')
+      if (self.value === 'night'){
+        target.style.backgroundColor='black';
+        target.style.color='white'
+        self.value='day'
+
+        var links = document.querySelectorAll('a');
+        var i = 0;
+        while (i<links.length){
+          links[i].style.color = 'powderblue';
+          i = i+1;
+        }
+      }
+      else{
+        target.style.color='black'
+        target.style.backgroundColor='white';
+        self.value='night'
+
+        var links = document.querySelectorAll('a');
+        var i = 0;
+        while (i<links.length){
+          links[i].style.color = 'blue';
+          i = i+1;
+        }
+      }
+    }
+      
+  </script>
 </head>
 
 <body>
-  <h1> 메인 화면</h1>
-  이곳은 김혜민이 HTML을 연습하는 곳입니다.
+  <h1><a href="hello.html">김혜민의 웹사이트</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+
   <h3> 연결된 사이트 </h3>
-  <li><a href="sub1.html"> sub1</a></li>
-  <li><a href="sub2.html"> sub2</a></li>
+  <li><a href="sub1.html">sub</a></li>
+  <li><a href="print.html">input</a></li>
+
+  <br>
+  이곳은 김혜민이 HTML을 연습하는 곳입니다.
 </body>
+</html>

@@ -42,7 +42,21 @@
     <h3> 연결된 사이트 </h3>
     <li><a href="sub1.html">sub</a></li>
     <li><a href="print.html">input</a></li>
-
     <br>
-    이곳은 김혜민이 아무 생각 없이 만든 곳 입니다.
+    이곳은 김혜민이 생각하고 만든 곳 입니다.
+    <br>
+    <input type="text" id="text" value="press enter">
+    <br>
+    <p1></p1>
+
+    <script>
+      var text = document.getElementById("text");
+      text.addEventListener("keydown", function (e) {
+          if (e.code === "Enter") { 
+            var val=document.getElementById('text').value;
+            document.querySelector('p1').innerHTML = document.querySelector('p1').innerHTML + val + '<br>';
+            document.getElementById('text').value='';
+        }
+      });
+    </script>
 </body>
