@@ -1,36 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  <script>
-    function nightDayHandler(self){
-      var target = document.querySelector('body')
-      if (self.value === 'night'){
-        target.style.backgroundColor='black';
-        target.style.color='white'
-        self.value='day'
-
-        var links = document.querySelectorAll('a');
-        var i = 0;
-        while (i<links.length){
-          links[i].style.color = 'powderblue';
-          i = i+1;
-        }
-      }
-      else{
-        target.style.color='black'
-        target.style.backgroundColor='white';
-        self.value='night'
-
-        var links = document.querySelectorAll('a');
-        var i = 0;
-        while (i<links.length){
-          links[i].style.color = 'blue';
-          i = i+1;
-        }
-      }
-    }
-      
-  </script>
+  <script src="colors.js"></script>
 </head>
 
 <body>
@@ -39,11 +10,13 @@
       nightDayHandler(this);
     ">
 
-    <h3> 연결된 사이트 </h3>
+    <h3> 목차 </h3>
     <li><a href="sub1.html">sub</a></li>
     <li><a href="print.html">input</a></li>
     <br>
-    이곳은 김혜민이 생각하고 만든 곳 입니다.
+    밑에 press enter이라고 적힌 곳에 원하는걸 적고 enter키를 누르면 빈칸 밑에 표기가 됩니다! (근데 한국어는 두번 적혀요. 오류가 난것 같은데 왜인지 몰라서 못고쳤습니다ㅠ)
+    <br>
+    그리고 적히는 내용은 저장되지 않습니다. 웹사이트를 재방문하시면 리셋됩니다.
     <br>
     <input type="text" id="text" value="press enter">
     <br>

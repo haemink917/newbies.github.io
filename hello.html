@@ -3,36 +3,7 @@
 <head>
   <title>MAIN</title>
   <meta charset = "utf-8">
-  <script>
-    function nightDayHandler(self){
-      var target = document.querySelector('body')
-      if (self.value === 'night'){
-        target.style.backgroundColor='black';
-        target.style.color='white'
-        self.value='day'
-
-        var links = document.querySelectorAll('a');
-        var i = 0;
-        while (i<links.length){
-          links[i].style.color = 'powderblue';
-          i = i+1;
-        }
-      }
-      else{
-        target.style.color='black'
-        target.style.backgroundColor='white';
-        self.value='night'
-
-        var links = document.querySelectorAll('a');
-        var i = 0;
-        while (i<links.length){
-          links[i].style.color = 'blue';
-          i = i+1;
-        }
-      }
-    }
-      
-  </script>
+  <script src="colors.js"></script>
 </head>
 
 <body>
@@ -41,11 +12,13 @@
     nightDayHandler(this);
   ">
 
-  <h3> 연결된 사이트 </h3>
+  <h3> 목차 </h3>
   <li><a href="sub1.html">sub</a></li>
   <li><a href="print.html">input</a></li>
-
   <br>
-  이곳은 김혜민이 HTML을 연습하는 곳입니다.
+  <h2>메인화면에 어서오세요</h2>
+  이곳은 김혜민이 HTML 및 자바스크립트(js)를 연습하는 곳입니다. <br>
+  sub 사이트는 별거 없으니 안가셔도 되고 input 사이트는 신기한거 만들었으니 들르시는걸 추천드립니다(?)
+  
 </body>
 </html>

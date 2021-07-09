@@ -1,36 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  <script>
-    function nightDayHandler(self){
-      var target = document.querySelector('body')
-      if (self.value === 'night'){
-        target.style.backgroundColor='black';
-        target.style.color='white'
-        self.value='day'
-
-        var links = document.querySelectorAll('a');
-        var i = 0;
-        while (i<links.length){
-          links[i].style.color = 'powderblue';
-          i = i+1;
-        }
-      }
-      else{
-        target.style.color='black'
-        target.style.backgroundColor='white';
-        self.value='night'
-
-        var links = document.querySelectorAll('a');
-        var i = 0;
-        while (i<links.length){
-          links[i].style.color = 'blue';
-          i = i+1;
-        }
-      }
-    }
-      
-  </script>
+  <script src="colors.js"></script>
 </head>
 
 <body>
@@ -39,10 +10,10 @@
       nightDayHandler(this);
     ">
 
-    <h3> 연결된 사이트 </h3>
+    <h3> 목차 </h3>
     <li><a href="sub1.html">sub</a></li>
     <li><a href="print.html">input</a></li>
 
     <br>
-    이곳은 김혜민이 아무 생각 없이 만든 곳 입니다.
+    이곳은 김혜민이 아무 생각 없이 목차 채워보려고 만든 곳 입니다.
 </body>
